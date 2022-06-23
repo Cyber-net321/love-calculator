@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love calculator</title>
+    <style>
+
+    *{
+        color: white;
+        font-family: century gothic;
+    }
+    body{
+        background-image: url(55.png);
+        position: absolute;
+        height: 100vh;
+background-size:cover;
+        width: 100%;
+    }
+
+    .content{
+        width: 800px;
+    }
+
+    .calculator{
+        border-radius: 20px;
+        width: 800px;
+        margin-left:35% ;
+        margin-top: 10%;;
+        border: 1px solid transparent;
+        background-color: rgba(0,0 ,0 , 0.8);
+
+    }
+
+    .t1{
+        color:red;
+font-size:20px;
+        letter-spacing: 5px;
+        margin-left:35% ;
+font-family:Waltograph UI;
+    }
+
+    input{
+        margin-left:5%;
+        border-radius: 3px;
+        border:none;
+font-family:Waltograph UI;
+        font-size: 18px;
+        padding: 5px;
+        color: black;
+    }
+
+    span{
+        margin-left: 3%;
+    }
+
+    .lname{
+        margin-right: 2px;
+    }
+
+    .btn{
+        margin-left: 43%;
+        padding: 5px;
+        border: none;
+        width: 100px;
+        border-radius: 3px;
+        background-color: lightcoral;
+        transition: 0.4s ease-in-out;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: pink;
+        color: black;
+    }
+
+    .percent{
+        margin-left: 36%;
+width:200px;
+margin-bottom:2%;
+background-color:pink;
+text-align:center;
+color:red;
+
+    }
+img{
+width:50px;
+height:50px;
+}
+
+
+
+    
+    input:focus{
+       background-color:  pink;
+
+    }
+#statement{
+color:red;
+font-family:waltograph ui;
+font-size:20px;
+font-weight:bold;
+margin-left:33%;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+            
+        <div class="content">
+            <div class="calculator">
+            <h3 class="t1">lets find out<img src="6.gif"></h3><br>
+            <input type="text" name="name1" placeholder="your name" id="nameone" class="fname" onfocus="this.value = ''">
+            &nbsp&nbsp&nbsp<span><img src="2.gif"></span>
+            <input type="text" name="name2" placeholder="lover name" id="nametwo" class="lname" onfocus="this.value = ''"><br><br>
+            <button onclick="love()" class="btn">click</button><br><br>
+            <input type="text" name="" placeholder="LOVE PERCENTAGE" id="lovevalue" class="percent">
+<p id="statement"></p></div>
+            
+            
+        </div>
+
+        </div>
+    </div>
+    <script>
+    function love(){
+
+       
+        var name1 = document.getElementById("nameone").value;
+
+         var name2 = document.getElementById("nametwo").value;
+
+
+
+
+    if(name1.length<=2){
+        alert("minimum length is 3 characters");
+         }
+    if(name2.length<=2){
+        alert("minimum length is 3 characters");
+         }
+
+
+     else{
+       var random = Math.floor(Math.random() * 100);
+      document.getElementById("lovevalue").value = random + "%" + " " + "of love";
+         }
+if(random<=40 || random<=50){
+document.getElementById("statement").innerHTML = "good relationship keep up!";
+}
+else if(random<=51 || random<=100){
+document.getElementById("statement").innerHTML = "wow!! best relationship";
+}
+if(random<=10 || random<=20){
+document.getElementById("statement").innerHTML = ":-( dying relationship";
+}
+
+
+
+    }
+</script>  
+</body>
+</html>
