@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love calculator</title>
+    <style>
+
+    *{
+        color: white;
+        box-sizing:border-box;
+        font-family: century gothic;
+    }
+    body{
+        background-image: url(55.png);
+        position: absolute;
+        height: 100vh;
+background-size:cover ;
+        width: 100%;
+    }
+
+    .content{
+        width: 800px;
+    }
+
+    .calculator{
+        border-radius: 20px;
+        width: 400px;
+        height:600px;
+        margin-left:2% ;
+        margin-top: 5%;
+        border: 1px solid lightpink;
+        background-color: rgba(0,0 ,0 , 0.8);
+
+    }
+
+    .t1{
+        color:red;
+font-size:20px;
+        letter-spacing: 5px;
+        margin-left:15% ;
+font-family:Waltograph UI;
+    }
+
+    input{
+        margin-left:8px;
+        border-radius: 5px;
+        border:none;
+font-family:Waltograph UI;
+        font-size: 3Spx;
+        padding: 10px;
+        width: 380px;
+        margin-top: 30px;
+        color: black;
+    }
+
+    span{
+        display: none;
+        margin-left: 3%;
+    }
+
+    .lname{
+        margin-right: 2px;
+    }
+
+    .btn{
+        margin-top:10%;
+        margin-left: 38%;
+        padding: 5px;
+        height: 30px;
+        border: none;
+        width: 100px;
+        font-size: 15px;
+        border-radius: 30px;
+        background-color: lightcoral;
+        transition: 0.4s ease-in-out;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: pink;
+        color: black;
+    }
+    .social{
+        margin-top: -6%;
+        margin-left: 26%;
+        width: 20px;
+        height: 20px;
+        display:flex;
+        float:left;
+    }
+
+    .percent{
+        margin-left: 15%;
+        padding-top: 25px;
+width:300px;
+height: 50px;
+margin-top:10%;
+background-color: transparent;
+border-radius: 10px;
+border-bottom:3px solid lightpink ;
+text-align:center;
+color:red;
+
+    }
+img{
+width:50px;
+height:50px;
+}
+
+
+
+    
+    input:focus{
+       background-color:  pink;
+
+    }
+
+#statement{
+color:red;
+
+font-family:waltograph ui;
+font-size:20px;
+font-weight:bold;
+margin-top: 30%;
+margin-left:28%;
+}
+.cyber{
+    margin-top: -19px;
+    text-align: center;
+    margin-left: -45%;
+    font-size: 10px;
+    color: lightslategray;
+}
+@media only screen and (min-width: 768px) {
+    .calculator{
+        
+        height:480px;
+        margin-left:5px ;
+        margin-top: 10%;;
+        
+
+    }
+    .btn{
+        margin-top:5%;
+        margin-left: 38%;
+        padding: 5px;
+        height: 30px;
+        border: none;
+        width: 100px;
+        font-size: 15px;
+        border-radius: 30px;
+        background-color: lightcoral;
+        transition: 0.4s ease-in-out;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .percent{
+        margin-left: 32%;
+        padding-top: 25px;
+width:150px;
+height: 20px;
+margin-top:5px;
+
+    }
+    #statement{
+font-size: 15px;
+margin-right:23px ;
+margin-top: 7%;
+}
+
+}
+@media only screen and (min-width: 1000px) {
+    .calculator{
+        border-radius: 20px;
+        width: 700px;
+        height:400px;
+        margin-left:36% ;
+        margin-top: 10%;;
+       
+
+    }
+    input{
+        width: 300px;
+        margin-left:3.5%;
+        border-radius: 5px;
+        font-size: 15px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    .cyber{
+   display: none;
+}
+.btn{
+        margin-top:10px;
+        margin-left: 42.5%;
+        height: 40px;
+        width: 100px;
+        font-size: 15px;
+        border-radius: 10px;
+        
+    }
+    .percent{
+        margin-left: 37%;
+        padding-top: 25px;
+width:180px;
+height: 20px;
+margin-top:5px;
+border-radius: 20px;
+
+    }
+    .social{
+        margin-top: -6%;
+        margin-left: 78%;
+        width: 25px;
+        height: 25px;
+        display:flex;
+    }
+    #statement{
+color:red;
+
+font-family:waltograph ui;
+font-size:20px;
+font-weight:bold;
+margin-top: 3%;
+margin-left:30%;
+}
+.t1{
+        color:red;
+font-size:20px;
+        letter-spacing: 5px;
+        margin-left:33% ;
+font-family:Waltograph UI;
+    }
+    
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+            
+        <div class="content">
+            <div class="calculator">
+            <h3 class="t1">lets find out &#128525;</h3><br>
+            <input type="text" name="name1" placeholder="your name" id="nameone" class="fname" onfocus="this.value = ''">
+            &nbsp&nbsp&nbsp
+            <input type="text" name="name2" placeholder="lover name" id="nametwo" class="lname" onfocus="this.value = ''"><br><br>
+            <button onclick="love()" class="btn">click</button><br><br>
+            <input type="text" name="" placeholder="love%" id="lovevalue" class="percent">
+<p id="statement"></p></div>
+<a href="the.real.cyber@instagram.com"><img src="insta.jpeg" class="social"></a>
+<h2 class="cyber">developed by cyber_</h2>
+            
+            
+        </div>
+
+        </div>
+    </div>
+    <script>
+    function love(){
+
+       
+        var name1 = document.getElementById("nameone").value;
+
+         var name2 = document.getElementById("nametwo").value;
+
+
+
+
+    if(name1.length<=2){
+        alert("minimum length is 3 characters");
+         }
+    if(name2.length<=2){
+        alert("minimum length is 3 characters");
+         }
+
+
+     else{
+       var random = Math.floor(Math.random() * 100);
+      document.getElementById("lovevalue").value = random + "%" + " " + "of love";
+         }
+if(random<=40 || random<=50){
+document.getElementById("statement").innerHTML = "good relationship keep up!";
+}
+else if(random<=51 || random<=100){
+document.getElementById("statement").innerHTML = "wow!! best relationship";
+}
+if(random<=10 || random<=20){
+document.getElementById("statement").innerHTML = ":-( dying relationship";
+}
+
+
+
+    }
+</script>  
+</body>
+</html>
